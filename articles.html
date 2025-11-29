@@ -1,0 +1,88 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Dental Health Articles</h2>
+    <p>Stay informed with our expert-written dental care tips, news, and advice.</p>
+  </section>
+
+  <section class="articles-list">
+    <article>
+      <h3>The Importance of Annual Dental Check-Ups</h3>
+      <li><a href="https://www.qld.gov.au/health/staying-healthy/oral-health/visiting-the-dentist/regular-dental-check-ups">The Importance of Annual Dental Check-Ups</a></li>
+      <p>Annual dental check-ups allow early detection of health issues, preventive care, tailored nutritional guidance, and ensure holistic well-being. Routine visits protect against dental diseases and maintain a confident, healthy smile.</p>
+    </article>
+
+    <article>
+      <h3>Tips for Maintaining Oral Hygiene</h3>
+      <li><a href="https://my.clevelandclinic.org/health/treatments/16914-oral-hygiene">Tips for Maintaining Oral Hygiene</a></li>
+      <p>Discover effective brushing, flossing, and dietary habits to keep your teeth and gums healthy. Proper oral care reduces plaque, prevents cavities, and promotes long-term dental wellness.</p>
+    </article>
+
+    <article>
+      <h3>Understanding Dental Implants</h3>
+      <li><a href="https://www.healthdirect.gov.au/dental-implant">Understanding Dental Implants</a></li>
+      <p>Learn how dental implants restore missing teeth, improve oral function, and enhance aesthetics. We explain the process, benefits, and what to expect during treatment.</p>
+    </article>
+
+    <article>
+      <h3>How to Choose the Right Toothbrush</h3>
+      <li><a href="https://www.colgate.com.au/oral-health/selecting-dental-products/choosing-the-right-toothbrush">How to Choose the Right Toothbrush</a></li>
+      <p>Choosing the right toothbrush and technique is key to effective oral care. We guide you through selecting the best toothbrush for your dental needs and maintaining a proper brushing routine.</p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<!-- Hamburger Menu Script -->
+<script>
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+   // Close menu when clicking outside
+   document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+
+</body>
+</html>

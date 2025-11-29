@@ -1,0 +1,106 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Our Dental Services</h2>
+    <p>Providing comprehensive, technologically advanced care for patients of all ages.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="service-item" id="checkup">
+      <img src="images/adobeStock_473854744.jpeg" alt="Regular Checkup">
+      <h3>Regular Check-Up</h3>
+      <p>Routine exams, cleanings, and diagnostics to maintain optimal oral health and prevent dental problems before they occur.</p>
+      <a href="contact.html" class="cta-button">Book Now</a>
+    </div>
+
+    <div class="service-item" id="orthodontics">
+      <img src="images/adobeStock_71839952.jpeg" alt="Orthodontics">
+      <h3>Orthodontics</h3>
+      <p>Braces, aligners, and orthodontic treatments designed to straighten teeth, correct bite issues, and improve your smile.</p>
+      <a href="contact.html" class="cta-button">Book Now</a>
+    </div>
+
+    <div class="service-item" id="cosmetic">
+      <img src="images/adobeStock_537857878.jpeg" alt="Cosmetic Dentistry">
+      <h3>Cosmetic Dentistry</h3>
+      <p>Veneers, teeth whitening, and smile makeovers that enhance aesthetics while maintaining dental health.</p>
+      <a href="contact.html" class="cta-button">Book Now</a>
+    </div>
+
+    <div class="service-item" id="implants">
+      <img src="images/adobeStock_283903376.jpeg" alt="Dental Implants">
+      <h3>Dental Implants</h3>
+      <p>Permanent solutions for missing teeth, using state-of-the-art implant technology for function, comfort, and natural appearance.</p>
+      <a href="contact.html" class="cta-button">Book Now</a>
+    </div>
+
+    <div class="service-item" id="emergency">
+      <img src="images/adobeStock_298640195.jpeg" alt="Emergency Care">
+      <h3>Emergency Dental Care</h3>
+      <p>Immediate treatment for urgent dental issues, injuries, and unexpected dental problems, ensuring prompt relief and care.</p>
+      <a href="contact.html" class="cta-button">Book Now</a>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <a href="contact.html" class="cta-button">Book Your Appointment Today</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<script>
+  // Hamburger Menu
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Announcement -->
+  <section class="announcement" aria-live="polite">
+    <p><strong>Now live:</strong> Our new online booking system — book appointments 24/7. <a href="contact.html">Book now</a>.</p>
+    <p><strong>Promotion:</strong> <span class="highlight">25% off your next visit</span> when you book through our online booking form. <strong>Free dental checkup:</strong> Saturday, 5th July starting 9 AM — limited slots available. Until April 30, enjoy a 10% discount on your Annual Dental Check-Up at 100SMILES Dental Care.</p>
+  </section>
+
+  <!-- Free Dental Checkup Image -->
+  <section class="promo-card">
+    <img src="images/advert.png" alt="Free Dental Checkup">
+    <h3>Free Dental Checkup!</h3>
+    <p>Book now to reserve your slot - limited availability. Perfect for all ages!</p>
+    <a href="contact.html" class="cta-button">Book Now</a>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to 100SMILES Dental Care</h2>
+    <p><strong>Modern dental care in Razole for over three decades.</strong> From routine check-ups to advanced treatments — compassionate care for all ages.</p>
+    <p><a href="contact.html" class="btn-large">Book an appointment online</a></p>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <h2>Who we are</h2>
+    <p>
+      100SMILES Dental Care combines decades of experience with the latest dental technologies to deliver friendly, reliable, and compassionate care. <strong>We prioritize your comfort and lifelong dental health.</strong>
+    </p>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="technologies">
+    <h2>Our New Dental Technologies</h2>
+    <div class="technology-cards">
+      <div class="technology-card">
+        <img src="images/adobeStock_454644101.jpeg" alt="Digital X-Rays">
+        <h3>Digital X-Rays</h3>
+        <p>High-resolution images with <strong>reduced radiation</strong> for faster, accurate diagnosis.</p>
+      </div>
+      <div class="technology-card">
+        <img src="images/adobeStock_297288948.jpeg" alt="Intraoral Cameras">
+        <h3>Intraoral Cameras</h3>
+        <p>Detailed images to detect issues early and explain treatment options clearly.</p>
+      </div>
+      <div class="technology-card">
+        <img src="images/adobeStock_411728191.jpeg" alt="Laser Dentistry">
+        <h3>Laser Dentistry</h3>
+        <p>Minimally invasive procedures, <strong>reduced pain</strong>, and faster healing.</p>
+      </div>
+      <div class="technology-card">
+        <img src="images/adobeStock_262111000.jpeg" alt="CAD/CAM Technology">
+        <h3>CAD/CAM Technology</h3>
+        <p>Same-day precision crowns, bridges, and veneers for excellent fit and appearance.</p>
+      </div>
+      <div class="technology-card">
+        <img src="images/adobeStock_3dteeth.jpeg" alt="3D Printing">
+        <h3>3D Printing</h3>
+        <p>Accurate dental models, surgical guides, and custom appliances for improved outcomes.</p>
+      </div>
+      <div class="technology-card">
+        <img src="images/adobeStock_244031852.jpeg" alt="Teledentistry">
+        <h3>Teledentistry</h3>
+        <p>Virtual consultations from the comfort of your home for advice and treatment planning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trading Hours -->
+  <section class="hours">
+    <h2>Trading Hours</h2>
+    <ul>
+      <li>Monday - Friday: 8:30 AM - 6:30 PM</li>
+      <li>Saturday - Sunday: 8:30 AM - 1:00 PM</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<!-- Hamburger Menu Script -->
+<script>
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+   // Close menu when clicking outside
+   document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+
+</body>
+</html>

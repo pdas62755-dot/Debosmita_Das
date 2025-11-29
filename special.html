@@ -1,0 +1,84 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Current Special Offers</h2>
+    <p>Take advantage of our limited-time promotions to enhance your dental health and smile.</p>
+  </section>
+
+  <!-- Offers Section -->
+  <section class="offers">
+    <div class="offer-item">
+      <h3>Free Dental Checkup</h3>
+      <p>Get a FREE dental checkup on Saturday, 5th July starting at 9 a.m. Limited slots available! Ensure your oral health is in top shape at no cost.</p>
+      <a href="contact.html" class="cta-button">Book Your Free Checkup</a>
+    </div>
+
+    <div class="offer-item">
+      <h3>25% Discount via Online Booking</h3>
+      <p>Book your next dental appointment through our online booking system and enjoy a 25% discount on the visit.</p>
+      <a href="contact.html" class="cta-button">Book Online Now</a>
+    </div>
+
+    <div class="offer-item">
+      <h3>10% Off Annual Dental Check-Up</h3>
+      <p>Until April 30, enjoy a 10% discount on our Annual Dental Check-Up package, including examination, cleaning, X-rays, and personalized advice.</p>
+      <a href="contact.html" class="cta-button">Schedule Your Check-Up</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<script>
+  // Hamburger Menu
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+</body>
+</html>

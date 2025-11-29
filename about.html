@@ -1,0 +1,119 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>About 100SMILES Dental Care</h2>
+    <p>
+      A modern dental care facility located at 33 Fantail St. in Razole for over three decades. We are dedicated to providing the best dental care for our patients with over 50 years of combined experience. Our friendly, reliable, and compassionate team caters to patients of all ages.
+    </p>
+  </section>
+
+  <!-- Meet Our Staff -->
+  <h2 class="staff-heading">Meet Our Staff</h2>
+  <section class="about-cards">
+    <div class="about-card staff-member">
+      <img src="staff/dr._johanna_grey .png" alt="Dr. Johanna Grey">
+      <h3>Dr. Johanna Grey</h3>
+      <p>Orthodontics</p>
+    </div>
+    <div class="about-card staff-member">
+      <img src="staff/dr._emily_carter.jpeg" alt="Dr. Emily Carter">
+      <h3>Dr. Emily Carter</h3>
+      <p>Pediatric Dentist</p>
+    </div>
+    <div class="about-card staff-member">
+      <img src="staff/dr_benedict_sloan.png" alt="Dr. Benedict Sloan">
+      <h3>Dr. Benedict Sloan</h3>
+      <p>DMD</p>
+    </div>
+    <div class="about-card staff-member">
+      <img src="staff/richard_attam.jpeg" alt="Richard Attam">
+      <h3>Richard Attam</h3>
+      <p>Dental Hygienist</p>
+    </div>
+    <div class="about-card staff-member">
+      <img src="staff/april_kepner.jpg" alt="April Kepner">
+      <h3>April Kepner</h3>
+      <p>Receptionist</p>
+    </div>
+  </section>
+  <section class="about-cards">
+    <div class="about-card">
+      <img src="images/adobeStock_311198389.jpeg" alt="Our History">
+      <h3>Our History</h3>
+      <p>
+        For over three decades, 100SMILES Dental Care has been proudly serving the Razole community. We offer a comprehensive range of services from preventive check-ups and cleanings to orthodontics, implants, and cosmetic dentistry. Our focus on patient education ensures informed decisions for lifelong dental health.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <img src="images/adobeStock_3Dteeth.jpeg" alt="Our Technologies">
+      <h3>Our Technologies</h3>
+      <p>
+        We integrate cutting-edge technologies such as Digital X-Rays, Intraoral Cameras, Laser Dentistry, CAD/CAM systems, 3D printing, and Teledentistry to provide precise, comfortable, and convenient dental care for all patients.
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h3>Online Booking & Special Offers</h3>
+      <p>
+        Our online booking system allows you to schedule appointments easily. We also offer special promotions, including free dental checkups and discounts on annual dental visits to enhance your experience with us.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<!-- Hamburger Menu Script -->
+<script>
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+
+</body>
+</html>

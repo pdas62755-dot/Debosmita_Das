@@ -1,0 +1,114 @@
+<!---Author: Debosmita Das
+Date : 28/11/2025 --->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100SMILES Dental Care</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>100SMILES Dental Care</h1>
+  <nav>
+    <button class="menu-toggle" onclick="hamburger()" aria-expanded="false" aria-controls="menu-links">☰</button>
+    <ul id="menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="articles.html">Articles</a></li>
+      <li><a href="special.html">Special Offers</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Contact 100SMILES Dental Care</h2>
+    <p>We are here to answer your questions and help you book your dental appointment.</p>
+  </section>
+
+  <!-- Appointment Form -->
+  <section id="contact-form">
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="07 5000 5599">
+
+      <label for="service">Service Required</label>
+      <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option value="checkup">Regular Check-Up</option>
+        <option value="orthodontics">Orthodontics</option>
+        <option value="cosmetic">Cosmetic Dentistry</option>
+        <option value="implants">Dental Implants</option>
+        <option value="emergency">Emergency Care</option>
+        <option value="free-checkup">Free Dental Checkup</option>
+      </select>
+
+      <label for="appointment-date">Preferred Date</label>
+      <input type="date" id="appointment-date" name="appointment-date" required>
+
+      <label for="appointment-time">Preferred Time</label>
+      <input type="time" id="appointment-time" name="appointment-time" required>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message" rows="5" placeholder="Any other information..."></textarea>
+
+      <label>
+        <input type="checkbox" required>
+        I consent to receive appointment confirmation via email/phone.
+      </label>
+
+      <button type="submit" class="cta-button">Book Appointment</button>
+    </form>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section id="contact-info">
+    <h3>Our Address & Info</h3>
+    <p>33 Fantail Street, Razole, Queensland</p>
+    <p>Phone: 07 5000 5599</p>
+    <p>Fax: 07 4567 9999</p>
+    <p>Email: <a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+    <p>Trading Hours: Monday - Friday: 8:30am - 6:30pm | Saturday - Sunday: 8:30am - 1pm</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 100SMILES Dental Care. All Rights Reserved.</p>
+  <p><a href="mailto:admin@100smilesdentalcare.com.au">admin@100smilesdentalcare.com.au</a></p>
+</footer>
+
+<!-- Hamburger Menu Script -->
+<script>
+  function hamburger() {
+    const menu = document.getElementById('menu-links');
+    menu.classList.toggle('active');
+    const toggleButton = document.querySelector('.menu-toggle');
+    const isActive = menu.classList.contains('active');
+    toggleButton.setAttribute('aria-expanded', isActive);
+  }
+   // Close menu when clicking outside
+   document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggleButton = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
+      menu.classList.remove('active');
+      toggleButton.setAttribute('aria-expanded', false);
+    }
+  });
+</script>
+
+</body>
+</html>
